@@ -8,8 +8,26 @@
 
 namespace Controller;
 
+use Model\Candy;
+use Model\CandyManager;
 
-class CandyController
+/**
+ * Class CandyController
+ * @package Controller
+ */
+class CandyController extends AbstractController
 {
+    /**
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
+     */
+    public function index()
+    {
+        $candyManager = new CandyManager($this->getPdo());
+        $candies = $candyManager->selectAll();
 
+        return $this->twig->render('Candy/index.html.twig', ['candies' => $candies]);
+    }
 }
