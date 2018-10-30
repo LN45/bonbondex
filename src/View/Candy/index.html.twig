@@ -1,0 +1,34 @@
+{% extends 'layout.html.twig' %} {% block content %}
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <h1>Liste de Bonbons Recuperes</h1>
+        </div>
+        <table class="table text-center">
+            <thead class="thead-dark">
+            <tr>
+
+                <th scope="col">Noms</th>
+                <th scope="col">Images</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for candy in candies %}
+                <tr>
+
+                    <td>{{ candy.name }}</td>
+                    {% if candy.picture is not empty %}
+                        <td><img src="{{candy.picture }}" alt="{{candy.name}}"></td>
+                    {% else %}
+                        <td><img src="https://via.placeholder.com/150x150" alt=""></td>
+                    {% endif %}
+                    <td><a href="/candyList/add" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Ajouter</a></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
