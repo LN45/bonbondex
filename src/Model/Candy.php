@@ -13,7 +13,7 @@ class Candy
 {
     private $id;
     private $name;
-    private $id_ean;
+    private $url;
 
     /**
      * @return mixed
@@ -50,16 +50,20 @@ class Candy
     /**
      * @return mixed
      */
-    public function getIdEan()
+    public function getUrl()
     {
-        return $this->id_ean;
+        return $this->url;
     }
 
     /**
-     * @param mixed $id_ean
+     * @param mixed $url
      */
-    public function setIdEan($id_ean)
+    public function setUrl($url)
     {
-        $this->id_ean = $id_ean;
+        $this->url = $url;
     }
+
+
+
+
 }

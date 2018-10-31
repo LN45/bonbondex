@@ -27,4 +27,5 @@ const TABLE ='candy';
     {
         parent::__construct(self::TABLE, $pdo);
     }
+
 }

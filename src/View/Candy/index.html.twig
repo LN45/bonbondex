@@ -3,32 +3,17 @@
         <div class="row justify-content-center">
             <h1>Liste de Bonbons Recuperes</h1>
         </div>
-        <table class="table text-center">
-            <thead class="thead-dark">
-            <tr>
-
-                <th scope="col">Noms</th>
-                <th scope="col">Images</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-
-            </tr>
-            </thead>
-            <tbody>
+        <div class="row justify-content-between">
             {% for candy in candies %}
-                <tr>
-
-                    <td>{{ candy.name }}</td>
-                    {% if candy.picture is not empty %}
-                        <td><img src="{{candy.picture }}" alt="{{candy.name}}"></td>
-                    {% else %}
-                        <td><img src="https://via.placeholder.com/150x150" alt=""></td>
-                    {% endif %}
-                    <td><a href="/candyList/add" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Ajouter</a></td>
-
-                </tr>
+                    <div class="card mt-3 pt-2 pb-2 col-md-3 ml-3" style="width: 18rem;">
+                        {% if candy.url is not empty %}
+                            <img src="{{candy.url }}" alt="{{candy.name}}">
+                        {% else %}
+                            <img class="card-img-top" src="https://via.placeholder.com/150x150" alt="Card image cap">
+                        {% endif %}
+                            <h5 class="card-title">{{ candy.name }}</h5>
+                    </div>
             {% endfor %}
-            </tbody>
-        </table>
+        </div>
     </div>
 {% endblock %}
