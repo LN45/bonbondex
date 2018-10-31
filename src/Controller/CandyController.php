@@ -1,11 +1,10 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: ln
+ * User: wilder22
  * Date: 30/10/18
- * Time: 21:33
+ * Time: 17:31
  */
-
 
 namespace Controller;
 use Model\CandyManager;
@@ -56,5 +55,18 @@ class CandyController extends AbstractController
         }
 
         return $this->twig->render('Candy/add.html.twig');
+    }
+      /**
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
+     */
+    public function index()
+    {
+        $candyManager = new CandyManager($this->getPdo());
+        $candies = $candyManager->selectAll();
+
+        return $this->twig->render('Candy/index.html.twig', ['candies' => $candies]);
     }
 }

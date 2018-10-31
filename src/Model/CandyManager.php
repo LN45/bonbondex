@@ -9,6 +9,10 @@
 namespace Model;
 
 
+/**
+ * Class CandyManager
+ * @package Model
+ */
 class CandyManager extends AbstractManager
 {
     /**
@@ -23,7 +27,6 @@ class CandyManager extends AbstractManager
     {
         parent::__construct(self::TABLE, $pdo);
     }
-
 
 
     public function insert(Candy $candy): int
