@@ -18,13 +18,21 @@ li {
 body {
     background-image: url("http://ccspa-jalhay-stoumont.be/wp-content/uploads/Halloween.jpg");
     background-size: cover;
+    background-attachment: fixed;
 }
-h1 {
+h1  {
     color: orange;
     font-family: 'Spicy Rice', cursive;
-    font-size: 6em;
+    font-size: 4em;
+}
+h2{
+    font-family: 'Spicy Rice', cursive;
 }
 h3 {
     color: white;
     font-size: 2em;
+}
+.card{
+    border-radius: 10px;
+    box-shadow: 10px 10px 25px orange;
 }
