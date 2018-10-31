@@ -11,8 +11,11 @@
 
 $routes = [
     'Candy' => [
-        ['index', '/', 'GET'],
+        ['index', '/candy', 'GET'],
         ['show','/candy/show','GET'],
         ['add','/candy/add',['GET', 'POST']],
+    ],
+    'Home' => [
+        ['index', '/', 'GET'],
     ]
 ];
