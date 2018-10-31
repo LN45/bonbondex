@@ -1,0 +1,30 @@
+#map_wrapper {
+    height: 400px;
+
+
+}
+#map_canvas {
+    width: 80%;
+    height: 150%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 25px orange;
+}
+nav {
+    margin-bottom: 150px;
+}
+li {
+    list-style-type: none;
+}
+body {
+    background-image: url("http://ccspa-jalhay-stoumont.be/wp-content/uploads/Halloween.jpg");
+    background-size: cover;
+}
+h1 {
+    color: orange;
+    font-family: 'Spicy Rice', cursive;
+    font-size: 6em;
+}
+h3 {
+    color: white;
+    font-size: 2em;
+}
