@@ -13,6 +13,6 @@ $routes = [
     'Candy' => [
         ['index', '/', 'GET'],
         ['show','/candy/show','GET'],
-        ['add','/candy/add',['GET', 'POST'],
+        ['add','/candy/add',['GET', 'POST']],
     ]
 ];
