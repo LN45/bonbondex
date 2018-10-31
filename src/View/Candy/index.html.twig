@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %} {% block content %}
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <h1>Liste de Bonbons Recuperes</h1>
+        </div>
+        <div class="row justify-content-between">
+            {% for candy in candies %}
+                    <div class="card mt-3 pt-2 pb-2 col-md-3 ml-3" style="width: 18rem;">
+                        {% if candy.url is not empty %}
+                            <img src="{{candy.url }}" alt="{{candy.name}}">
+                        {% else %}
+                            <img class="card-img-top" src="https://via.placeholder.com/150x150" alt="Card image cap">
+                        {% endif %}
+                            <h5 class="card-title">{{ candy.name }}</h5>
+                    </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
