@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <div class="container pt-5">
+    <div class="row justify-content-center">
+        <h1>Liste de Bonbons</h1>
+    </div>
+    <div class="row justify-content-between">
+    {% for json in jsons %}
+
+                <div class="card mt-3 pt-2 pb-2 col-md-3 ml-3" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ json.image_url }}" alt="{{ json.product_name_fr }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ json.product_name_fr }}</h5>
+                    </div>
+                    <form action="/" method="post">
+                        <input type="hidden" value="{{ json.image_url }}" name="url">
+                        <input type="hidden" value="{{ json.product_name_fr }}" name="name">
+                        <button class="btn btn-warning" type="submit" value="valider">Ajouter</button>
+                    </form>
+                </div>
+    {% endfor %}
+            </div>
+        </div>
+
+
+
+{% endblock %}

@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: wilder22
+ * User: ln
  * Date: 30/10/18
- * Time: 17:30
+ * Time: 20:47
  */
 
 namespace Model;
@@ -12,7 +12,9 @@ namespace Model;
 class Candy
 {
     private $id;
+
     private $name;
+
     private $url;
 
     /**
@@ -62,8 +64,4 @@ class Candy
     {
         $this->url = $url;
     }
-
-
-
-
 }
