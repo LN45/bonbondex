@@ -14,7 +14,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ json.product_name_fr }}</h5>
                     </div>
-                    <form action="/" method="post">
+                    <form action="/candy/add" method="post">
                         <input type="hidden" value="{{ json.image_url }}" name="url">
                         <input type="hidden" value="{{ json.product_name_fr }}" name="name">
                         <button class="btn btn-warning" type="submit" value="valider">Ajouter</button>
